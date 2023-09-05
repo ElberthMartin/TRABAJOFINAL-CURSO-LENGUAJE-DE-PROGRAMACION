@@ -8,3 +8,13 @@ C:\Users\USER\Desktop\proyectosc#\Trabajfinal LENGUAJE DE PROGRAMACIÓN\trabajof
 C:\Users\USER\Desktop\proyectosc#\Trabajfinal LENGUAJE DE PROGRAMACIÓN\trabajofinal\obj\Debug\trabajofinal.csproj.CoreCompileInputs.cache
 C:\Users\USER\Desktop\proyectosc#\Trabajfinal LENGUAJE DE PROGRAMACIÓN\trabajofinal\obj\Debug\trabajofinal.exe
 C:\Users\USER\Desktop\proyectosc#\Trabajfinal LENGUAJE DE PROGRAMACIÓN\trabajofinal\obj\Debug\trabajofinal.pdb
+C:\Users\USER\Desktop\proyectosc#\Trabajo final LENGUAJE DE PROGRAMACIÓN\Trabajo final LENGUAJE DE PROGRAMACIÓN\bin\Debug\trabajofinal.exe.config
+C:\Users\USER\Desktop\proyectosc#\Trabajo final LENGUAJE DE PROGRAMACIÓN\Trabajo final LENGUAJE DE PROGRAMACIÓN\bin\Debug\trabajofinal.exe
+C:\Users\USER\Desktop\proyectosc#\Trabajo final LENGUAJE DE PROGRAMACIÓN\Trabajo final LENGUAJE DE PROGRAMACIÓN\bin\Debug\trabajofinal.pdb
+C:\Users\USER\Desktop\proyectosc#\Trabajo final LENGUAJE DE PROGRAMACIÓN\Trabajo final LENGUAJE DE PROGRAMACIÓN\obj\Debug\trabajofinal.csproj.AssemblyReference.cache
+C:\Users\USER\Desktop\proyectosc#\Trabajo final LENGUAJE DE PROGRAMACIÓN\Trabajo final LENGUAJE DE PROGRAMACIÓN\obj\Debug\trabajofinal.Form1.resources
+C:\Users\USER\Desktop\proyectosc#\Trabajo final LENGUAJE DE PROGRAMACIÓN\Trabajo final LENGUAJE DE PROGRAMACIÓN\obj\Debug\trabajofinal.Properties.Resources.resources
+C:\Users\USER\Desktop\proyectosc#\Trabajo final LENGUAJE DE PROGRAMACIÓN\Trabajo final LENGUAJE DE PROGRAMACIÓN\obj\Debug\trabajofinal.csproj.GenerateResource.cache
+C:\Users\USER\Desktop\proyectosc#\Trabajo final LENGUAJE DE PROGRAMACIÓN\Trabajo final LENGUAJE DE PROGRAMACIÓN\obj\Debug\trabajofinal.csproj.CoreCompileInputs.cache
+C:\Users\USER\Desktop\proyectosc#\Trabajo final LENGUAJE DE PROGRAMACIÓN\Trabajo final LENGUAJE DE PROGRAMACIÓN\obj\Debug\trabajofinal.exe
+C:\Users\USER\Desktop\proyectosc#\Trabajo final LENGUAJE DE PROGRAMACIÓN\Trabajo final LENGUAJE DE PROGRAMACIÓN\obj\Debug\trabajofinal.pdb
