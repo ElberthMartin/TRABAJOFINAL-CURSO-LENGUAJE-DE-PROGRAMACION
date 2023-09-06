@@ -37,4 +37,10 @@ as
  set @codmax=(select max(codigo) from clientes)
  set @codmax= ISNULL(@codmax,'A0000')
 
+ set @codnuevo='A'+ RIGHT(RIGHT(@codmax,4)+1001,4)
+ insert into clientes(codigo,nombre,edad,telefono)
+ values(@codnuevo,@nombre,@edad,@telefono)
 
+ set @ ='Se genero el codigo: ' +@codnuevo
+
+ END
