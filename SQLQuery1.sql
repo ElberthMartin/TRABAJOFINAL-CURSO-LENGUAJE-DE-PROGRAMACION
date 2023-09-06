@@ -44,3 +44,10 @@ as
  set @ ='Se genero el codigo: ' +@codnuevo
 
  END
+
+ else if (@accion='2')
+ begin
+ update clientes SET nombre=@nombre, edad=@edad, telefono=@telefono where codigo=@codigo
+ set @accion='Se modificó el codigo: ' +@codigo
+
+ end
