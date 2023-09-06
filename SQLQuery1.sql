@@ -24,5 +24,17 @@ as
 select codigo,nombre,edad,telefono from clientes where nombre like @nombre + '%'
 go
 
+create proc sp_mantenimiento_clientes
+@codigo varchar (5),
+@nombre varchar (50),
+@edad int,
+@telefono int,
+@accion varchar(50) output
+as
+ if(@accion='1')
+ begin
+ declare @codnuevo varchar(5),@codmax varchar(5)
+ set @codmax=(select max(codigo) from clientes)
+ set @codmax= ISNULL(@codmax,'A0000')
 
 
