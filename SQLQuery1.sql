@@ -51,3 +51,8 @@ as
  set @accion='Se modificó el codigo: ' +@codigo
 
  end
+
+ else if (@accion='3')
+ begin
+ delete from clientes where codigo=@codigo
+ set @accion
