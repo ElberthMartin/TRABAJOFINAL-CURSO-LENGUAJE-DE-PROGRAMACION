@@ -10,22 +10,11 @@ using System.Windows.Forms;
 
 namespace trabajofinal
 {
-    public partial class Form1 : Form
+    public partial class Form2 : Form
     {
-        public Form1()
+        public Form2()
         {
             InitializeComponent();
-        }
-
-       
-
-       
-
-      
-        //
-        private void textBox1_TextChanged_2(object sender, EventArgs e)
-        {
-
         }
     }
 }
