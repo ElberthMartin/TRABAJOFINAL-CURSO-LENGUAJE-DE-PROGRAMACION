@@ -48,7 +48,9 @@ namespace trabajofinal
             }
             else
             {
-                
+                // Mostrar un mensaje de error
+                MessageBox.Show("Usuario o contraseña incorrectos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
             }
         }
 
