@@ -126,9 +126,22 @@ namespace trabajofinal
                         cmd.Parameters.AddWithValue("@Observaciones", textBox5.Text);
 
                         int rowsAffected = cmd.ExecuteNonQuery();
+
                         if (rowsAffected > 0)
                         {
-                            MessageBox.Show("Registro exitoso.");
+                            // Construir un mensaje con los datos registrados
+                            string mensaje = "Registro exitoso.\n\n";
+                            mensaje += "Primer Nombre: " + textBox7.Text + "\n";
+                            mensaje += "Segundo Nombre: " + textBox8.Text + "\n";
+                            mensaje += "Primer Apellido: " + textBox9.Text + "\n";
+                            mensaje += "Segundo Apellido: " + textBox10.Text + "\n";
+                            mensaje += "Celular: " + textBox1.Text + "\n";
+                            mensaje += "Dirección: " + textBox2.Text + "\n";
+                            mensaje += "Email: " + textBox3.Text + "\n";
+                            mensaje += "Fecha de Nacimiento: " + textBox4.Text + "\n";
+                            mensaje += "Observaciones: " + textBox5.Text + "\n";
+
+                            MessageBox.Show(mensaje, "Datos Registrados");
                         }
                         else
                         {
@@ -142,6 +155,7 @@ namespace trabajofinal
                 }
             }
         }
+
 
 
     }
