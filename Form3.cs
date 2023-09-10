@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using System.Data.SqlClient;
 namespace trabajofinal
 {
     public partial class Form3 : Form
@@ -26,5 +26,51 @@ namespace trabajofinal
         {
 
         }
+
+        //aqui se añadira 
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            //alter
+        }
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+            //alter
+        }
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+            //alter
+        }
+        private void textBox4_TextChanged(object sender, EventArgs e)
+        {
+            //alter
+        }
+        private void textBox5_TextChanged(object sender, EventArgs e)
+        {
+            //alter
+        }
+        private void textBox6_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+        private void textBox7_TextChanged(object sender, EventArgs e)
+        {
+            //alter
+        }
+        private void textBox8_TextChanged(object sender, EventArgs e)
+        {
+            //alter
+        }
+        private void textBox9_TextChanged(object sender, EventArgs e)
+        {
+            //alter
+        }
+        private void textBox10_TextChanged(object sender, EventArgs e)
+        {
+            //alter
+        }
+        //
+       
+
     }
 }
