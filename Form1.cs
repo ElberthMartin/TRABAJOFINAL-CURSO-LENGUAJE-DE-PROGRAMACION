@@ -25,6 +25,32 @@ namespace trabajofinal
             // Lógica a ser executada quando o texto do textBox1 é alterado.
         }
 
-       //Aquí se agregaran usuarios
+        //Aquí se agregaran usuarios
+        private Dictionary<string, string> usuarios = new Dictionary<string, string>()
+{
+    { "admin", "admin" },
+    { "admin1", "admin1" },
+    // Agrega más usuarios aquí si es necesario
+};
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string usuario = textBox1.Text;
+            string contraseña = textBox2.Text;
+
+            // Verificar si el usuario y la contraseña existen en el diccionario
+            if (usuarios.ContainsKey(usuario) && usuarios[usuario] == contraseña)
+            {
+                // Si es correcto, abrir Form2 y cerrar este formulario
+                Form2 form2 = new Form2();
+                form2.Show();
+                this.Hide();
+            }
+            else
+            {
+                
+            }
+        }
+
     }
 }
