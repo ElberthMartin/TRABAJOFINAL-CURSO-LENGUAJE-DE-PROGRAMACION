@@ -53,6 +53,21 @@ namespace trabajofinal
 
             }
         }
+        // seagreo un check box ver y ocultar contraseña
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            // Verificar si el CheckBox está marcado o desmarcado
+            if (checkBox1.Checked)
+            {
+                // Si está marcado, mostrar la contraseña
+                textBox2.PasswordChar = '\0'; // Mostrar caracteres normales (sin ocultar)
+            }
+            else
+            {
+                // Si está desmarcado, ocultar la contraseña
+                textBox2.PasswordChar = '*'; // Ocultar caracteres con un asterisco (puedes usar otro carácter si lo prefieres)
+            }
+        }
 
     }
 }
