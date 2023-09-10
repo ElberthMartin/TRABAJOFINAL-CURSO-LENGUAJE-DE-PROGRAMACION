@@ -18,3 +18,4 @@ C:\Users\USER\Desktop\proyectosc#\Trabajo final LENGUAJE DE PROGRAMACIÓN\Trabaj
 C:\Users\USER\Desktop\proyectosc#\Trabajo final LENGUAJE DE PROGRAMACIÓN\Trabajo final LENGUAJE DE PROGRAMACIÓN\obj\Debug\trabajofinal.csproj.CoreCompileInputs.cache
 C:\Users\USER\Desktop\proyectosc#\Trabajo final LENGUAJE DE PROGRAMACIÓN\Trabajo final LENGUAJE DE PROGRAMACIÓN\obj\Debug\trabajofinal.exe
 C:\Users\USER\Desktop\proyectosc#\Trabajo final LENGUAJE DE PROGRAMACIÓN\Trabajo final LENGUAJE DE PROGRAMACIÓN\obj\Debug\trabajofinal.pdb
+C:\Users\USER\Desktop\proyectosc#\Trabajo final LENGUAJE DE PROGRAMACIÓN\Trabajo final LENGUAJE DE PROGRAMACIÓN\obj\Debug\trabajofinal.Form2.resources
