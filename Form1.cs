@@ -11,7 +11,7 @@ using System.Windows.Forms;
 namespace trabajofinal
 {
     public partial class Form1 : Form
-    {
+    {// se oculto y se agrego para el movimiento con el mouse
         private bool isDragging = false;
         private Point lastCursorPosition;
 
@@ -50,7 +50,7 @@ namespace trabajofinal
                 isDragging = false;
             }
         }
-
+        //aqui termina el oculto
         private void textBox1_TextChanged_2(object sender, EventArgs e)
         {
             // Lógica a ser executada quando o texto do textBox1 é alterado.
@@ -105,6 +105,11 @@ namespace trabajofinal
         }
 
         private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+        //BOTON SALIR
+        private void button2_Click(object sender, EventArgs e)
         {
 
         }
