@@ -43,5 +43,9 @@ namespace trabajofinal
             this.Hide(); // Opcionalmente, puedes ocultar Form2 si deseas cerrarlo al abrir Form5
         }
 
+        private void Form2_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

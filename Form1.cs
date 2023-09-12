@@ -12,10 +12,45 @@ namespace trabajofinal
 {
     public partial class Form1 : Form
     {
+        private bool isDragging = false;
+        private Point lastCursorPosition;
+
         public Form1()
         {
             InitializeComponent();
+            this.FormBorderStyle = FormBorderStyle.None; // Oculta la barra de título
+            this.MouseDown += Form1_MouseDown;
+            this.MouseMove += Form1_MouseMove;
+            this.MouseUp += Form1_MouseUp;
         }
+
+        private void Form1_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                isDragging = true;
+                lastCursorPosition = e.Location;
+            }
+        }
+
+        private void Form1_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (isDragging)
+            {
+                int deltaX = e.X - lastCursorPosition.X;
+                int deltaY = e.Y - lastCursorPosition.Y;
+                this.Location = new Point(this.Location.X + deltaX, this.Location.Y + deltaY);
+            }
+        }
+
+        private void Form1_MouseUp(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                isDragging = false;
+            }
+        }
+
         private void textBox1_TextChanged_2(object sender, EventArgs e)
         {
             // Lógica a ser executada quando o texto do textBox1 é alterado.
@@ -69,5 +104,9 @@ namespace trabajofinal
             }
         }
 
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
