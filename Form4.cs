@@ -58,10 +58,7 @@ namespace trabajofinal
         {
             //alter
         }
-        private void textBox8_TextChanged(object sender, EventArgs e)
-        {
-            //alter
-        }
+       
         private void textBox9_TextChanged(object sender, EventArgs e)
         {
             //alter
@@ -98,8 +95,9 @@ namespace trabajofinal
                     connection.Open();
 
                     // Comando SQL para la inserción de datos en la tabla MatriculaInicial
-                    string insertQuery = "INSERT INTO MatriculaPrimaria (PrimerNombre, SegundoNombre, PrimerApellido, SegundoApellido, Celular, Direccion, Email, FechaNacimiento, Observaciones) VALUES (@PrimerNombre, @SegundoNombre, @PrimerApellido, @SegundoApellido, @Celular, @Direccion, @Email, @FechaNacimiento, @Observaciones)";
+                    string insertQuery = "INSERT INTO MatriculaPrimaria (PrimerNombre, Grado, Seccion, PrimerApellido, SegundoApellido, Celular, Direccion, Email, FechaNacimiento, Observaciones) VALUES (@PrimerNombre, @Grado, @Seccion, @PrimerApellido, @SegundoApellido, @Celular, @Direccion, @Email, @FechaNacimiento, @Observaciones)";
 
+                    //
                     using (SqlCommand cmd = new SqlCommand(insertQuery, connection))
                     {
                         // Completar automáticamente los campos que estén vacíos
@@ -117,7 +115,7 @@ namespace trabajofinal
                             textBox5.Text = "";
 
                         cmd.Parameters.AddWithValue("@PrimerNombre", textBox7.Text);
-                        cmd.Parameters.AddWithValue("@SegundoNombre", textBox8.Text);
+
                         cmd.Parameters.AddWithValue("@PrimerApellido", textBox9.Text);
                         cmd.Parameters.AddWithValue("@SegundoApellido", textBox10.Text);
                         cmd.Parameters.AddWithValue("@Celular", textBox1.Text);
@@ -125,6 +123,8 @@ namespace trabajofinal
                         cmd.Parameters.AddWithValue("@Email", textBox3.Text);
                         cmd.Parameters.AddWithValue("@FechaNacimiento", textBox4.Text);
                         cmd.Parameters.AddWithValue("@Observaciones", textBox5.Text);
+                        cmd.Parameters.AddWithValue("@Seccion", textBox6.Text);
+                        cmd.Parameters.AddWithValue("@Grado", textBox8.Text);
 
                         int rowsAffected = cmd.ExecuteNonQuery();
 
@@ -133,7 +133,7 @@ namespace trabajofinal
                             // Construir un mensaje con los datos registrados
                             string mensaje = "Registro exitoso.\n\n";
                             mensaje += "Primer Nombre: " + textBox7.Text + "\n";
-                            mensaje += "Segundo Nombre: " + textBox8.Text + "\n";
+
                             mensaje += "Primer Apellido: " + textBox9.Text + "\n";
                             mensaje += "Segundo Apellido: " + textBox10.Text + "\n";
                             mensaje += "Celular: " + textBox1.Text + "\n";
@@ -141,6 +141,9 @@ namespace trabajofinal
                             mensaje += "Email: " + textBox3.Text + "\n";
                             mensaje += "Fecha de Nacimiento: " + textBox4.Text + "\n";
                             mensaje += "Observaciones: " + textBox5.Text + "\n";
+                            mensaje += "Grado: " + textBox8.Text + "\n";
+                            mensaje += "Seccion: " + textBox6.Text + "\n";
+
 
                             MessageBox.Show(mensaje, "Datos Registrados");
                         }
@@ -156,8 +159,16 @@ namespace trabajofinal
                 }
             }
         }
+        //SECCION
+        private void textBox6_TextChanged_1(object sender, EventArgs e)
+        {
 
+        }
 
-
+        //GRADO
+        private void textBox8_TextChanged(object sender, EventArgs e)
+        {
+            //alter
+        }
     }
 }

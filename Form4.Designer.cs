@@ -48,6 +48,8 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.textBox6 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // button1
@@ -78,7 +80,7 @@
             // 
             // textBox8
             // 
-            this.textBox8.Location = new System.Drawing.Point(171, 160);
+            this.textBox8.Location = new System.Drawing.Point(171, 128);
             this.textBox8.Name = "textBox8";
             this.textBox8.Size = new System.Drawing.Size(171, 20);
             this.textBox8.TabIndex = 38;
@@ -86,7 +88,7 @@
             // 
             // textBox7
             // 
-            this.textBox7.Location = new System.Drawing.Point(171, 125);
+            this.textBox7.Location = new System.Drawing.Point(171, 92);
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(171, 20);
             this.textBox7.TabIndex = 37;
@@ -199,16 +201,16 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(49, 163);
+            this.label4.Location = new System.Drawing.Point(49, 131);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(111, 13);
+            this.label4.Size = new System.Drawing.Size(46, 13);
             this.label4.TabIndex = 24;
-            this.label4.Text = "SEGUNDO NOMBRE";
+            this.label4.Text = "GRADO";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(49, 128);
+            this.label3.Location = new System.Drawing.Point(49, 95);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(99, 13);
             this.label3.TabIndex = 23;
@@ -223,11 +225,30 @@
             this.label2.TabIndex = 22;
             this.label2.Text = "MATRICULA PRIMARIA";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(49, 167);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(54, 13);
+            this.label1.TabIndex = 42;
+            this.label1.Text = "SECCION";
+            // 
+            // textBox6
+            // 
+            this.textBox6.Location = new System.Drawing.Point(171, 167);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(171, 20);
+            this.textBox6.TabIndex = 43;
+            this.textBox6.TextChanged += new System.EventHandler(this.textBox6_TextChanged_1);
+            // 
             // Form4
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.textBox6);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox10);
             this.Controls.Add(this.textBox9);
@@ -277,5 +298,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox textBox6;
     }
 }
