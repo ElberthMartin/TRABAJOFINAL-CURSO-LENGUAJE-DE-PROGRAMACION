@@ -111,7 +111,8 @@ namespace trabajofinal
         //BOTON SALIR
         private void button2_Click(object sender, EventArgs e)
         {
-
+            // Cierra completamente el formulario Form1
+            this.Close();
         }
     }
 }
