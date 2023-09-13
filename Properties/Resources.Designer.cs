@@ -63,9 +63,29 @@ namespace trabajofinal.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap canda {
+            get {
+                object obj = ResourceManager.GetObject("canda", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap FOND {
             get {
                 object obj = ResourceManager.GetObject("FOND", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap FORM2 {
+            get {
+                object obj = ResourceManager.GetObject("FORM2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -96,6 +116,16 @@ namespace trabajofinal.Properties {
         internal static System.Drawing.Bitmap ICO_PER {
             get {
                 object obj = ResourceManager.GetObject("ICO PER", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ICONO {
+            get {
+                object obj = ResourceManager.GetObject("ICONO", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

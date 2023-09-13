@@ -121,13 +121,22 @@
   <data name="ICO PER" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\IMG\ICO PER.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="canda" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\IMG\canda.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ICONO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\IMG\ICONO.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ICO LLA1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\IMG\ICO LLA.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="FOND" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\IMG\FOND.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="ICO LLA" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\IMG\ICO LLA.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ICO LLA1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\IMG\ICO LLA.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="FORM2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\IMG\FORM2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

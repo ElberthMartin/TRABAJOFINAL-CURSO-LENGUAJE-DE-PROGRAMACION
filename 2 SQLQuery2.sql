@@ -43,3 +43,5 @@ CREATE TABLE MatriculaPrimaria
 
 --consulta
 select*from MatriculaPrimaria
+
+select*from MatriculaInicial

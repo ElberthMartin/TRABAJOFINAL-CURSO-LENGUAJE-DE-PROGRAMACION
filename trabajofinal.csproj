@@ -125,5 +125,14 @@
   <ItemGroup>
     <None Include="IMG\ICO LLA.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="IMG\canda.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="IMG\ICONO.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="IMG\FORM2.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
