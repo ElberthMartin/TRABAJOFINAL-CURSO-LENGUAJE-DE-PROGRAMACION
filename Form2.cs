@@ -146,5 +146,72 @@ namespace trabajofinal
                 }
             }
         }
+
+        private void buttonEliminar_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
+                // Pregunta al usuario para confirmar la eliminación
+                DialogResult result = MessageBox.Show("¿Estás seguro de que deseas eliminar este registro?", "Confirmar Eliminación", MessageBoxButtons.YesNo);
+
+                if (result == DialogResult.Yes)
+                {
+                    // Obtén la fila seleccionada
+                    DataGridViewRow selectedRow = dataGridView1.SelectedRows[0];
+
+                    // Obtén el valor de la columna "ID" de la fila seleccionada
+                    int id = Convert.ToInt32(selectedRow.Cells["ID"].Value);
+
+                    // Obtén la tabla seleccionada del ComboBox
+                    string selectedTable = comboBox1.SelectedItem.ToString();
+
+                    // Construye la consulta DELETE SQL
+                    string deleteQuery = $"DELETE FROM {selectedTable} WHERE ID = @ID";
+
+                    using (SqlConnection connection = new SqlConnection(connectionString))
+                    {
+                        try
+                        {
+                            connection.Open();
+
+                            // Crea un comando SQL con la consulta DELETE
+                            using (SqlCommand cmd = new SqlCommand(deleteQuery, connection))
+                            {
+                                // Agrega el parámetro @ID y establece su valor
+                                cmd.Parameters.AddWithValue("@ID", id);
+
+                                // Ejecuta la consulta DELETE
+                                int rowsAffected = cmd.ExecuteNonQuery();
+
+                                // Verifica si se eliminó con éxito
+                                if (rowsAffected > 0)
+                                {
+                                    // Elimina la fila del DataGridView
+                                    dataGridView1.Rows.Remove(selectedRow);
+                                    MessageBox.Show("Registro eliminado con éxito.");
+                                }
+                                else
+                                {
+                                    MessageBox.Show("No se pudo eliminar el registro.");
+                                }
+                            }
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show("Error: " + ex.Message);
+                        }
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Selecciona una fila para eliminar.");
+            }
+        }
+
+        private void buttonActualizar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
