@@ -211,7 +211,73 @@ namespace trabajofinal
 
         private void buttonActualizar_Click(object sender, EventArgs e)
         {
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
+                DataGridViewRow selectedRow = dataGridView1.SelectedRows[0];
 
+                // Obtén los valores actuales de la fila seleccionada
+                int id = Convert.ToInt32(selectedRow.Cells["Id"].Value);
+                string nuevoPrimerNombre = selectedRow.Cells["PrimerNombre"].Value.ToString();
+                string nuevoGrado = selectedRow.Cells["Grado"].Value.ToString();
+                string nuevaSeccion = selectedRow.Cells["Seccion"].Value.ToString();
+                string nuevoPrimerApellido = selectedRow.Cells["PrimerApellido"].Value.ToString();
+                string nuevoSegundoApellido = selectedRow.Cells["SegundoApellido"].Value.ToString();
+                string nuevoCelular = selectedRow.Cells["Celular"].Value.ToString();
+                string nuevaDireccion = selectedRow.Cells["Direccion"].Value.ToString();
+                string nuevoEmail = selectedRow.Cells["Email"].Value.ToString();
+                DateTime nuevaFechaNacimiento = Convert.ToDateTime(selectedRow.Cells["FechaNacimiento"].Value);
+                string nuevasObservaciones = selectedRow.Cells["Observaciones"].Value.ToString();
+                string nuevoNivelAcademico = selectedRow.Cells["NivelAcademico"].Value.ToString();
+
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    try
+                    {
+                        connection.Open();
+
+                        string tableName = comboBox1.SelectedItem.ToString(); // Nombre de la tabla seleccionada en el ComboBox
+
+                        string updateQuery = $"UPDATE {tableName} SET " +
+                            "PrimerNombre = @PrimerNombre, " +
+                            "Grado = @Grado, " +
+                            "Seccion = @Seccion, " +
+                            "PrimerApellido = @PrimerApellido, " +
+                            "SegundoApellido = @SegundoApellido, " +
+                            "Celular = @Celular, " +
+                            "Direccion = @Direccion, " +
+                            "Email = @Email, " +
+                            "FechaNacimiento = @FechaNacimiento, " +
+                            "Observaciones = @Observaciones " +
+                            "WHERE Id = @ID";
+
+                        SqlCommand cmd = new SqlCommand(updateQuery, connection);
+                        cmd.Parameters.AddWithValue("@PrimerNombre", nuevoPrimerNombre);
+                        cmd.Parameters.AddWithValue("@Grado", nuevoGrado);
+                        cmd.Parameters.AddWithValue("@Seccion", nuevaSeccion);
+                        cmd.Parameters.AddWithValue("@PrimerApellido", nuevoPrimerApellido);
+                        cmd.Parameters.AddWithValue("@SegundoApellido", nuevoSegundoApellido);
+                        cmd.Parameters.AddWithValue("@Celular", nuevoCelular);
+                        cmd.Parameters.AddWithValue("@Direccion", nuevaDireccion);
+                        cmd.Parameters.AddWithValue("@Email", nuevoEmail);
+                        cmd.Parameters.AddWithValue("@FechaNacimiento", nuevaFechaNacimiento);
+                        cmd.Parameters.AddWithValue("@Observaciones", nuevasObservaciones);
+                        cmd.Parameters.AddWithValue("@ID", id);
+
+                        cmd.ExecuteNonQuery();
+
+                        MessageBox.Show("La fila seleccionada ha sido actualizada correctamente.");
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Error al actualizar: " + ex.Message);
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Selecciona una fila para actualizar.");
+            }
         }
+
     }
 }
