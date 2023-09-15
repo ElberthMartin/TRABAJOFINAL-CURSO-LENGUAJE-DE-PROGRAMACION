@@ -279,5 +279,63 @@ namespace trabajofinal
             }
         }
 
+        private void textBoxBuscar_TextChanged(object sender, EventArgs e)
+        {
+            // Llama al método de búsqueda cada vez que se cambie el texto en el cuadro de búsqueda
+            RealizarBusqueda();
+        }
+
+        private void buttonBuscar_Click(object sender, EventArgs e)
+        {
+            // Llama al método de búsqueda cuando se hace clic en el botón de búsqueda
+            RealizarBusqueda();
+        }
+
+        private void RealizarBusqueda()
+        {
+            // Obtén el término de búsqueda desde el TextBox
+            string searchText = textBoxBuscar.Text.Trim();
+
+            // Validar que el término de búsqueda no esté vacío
+            if (string.IsNullOrEmpty(searchText))
+            {
+                MessageBox.Show("Por favor, ingresa un término de búsqueda.");
+                return;
+            }
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                try
+                {
+                    connection.Open();
+
+                    // Crear un DataTable para almacenar los resultados de la búsqueda
+                    DataTable dataTable = new DataTable();
+
+                    // Realizar la búsqueda en la tabla MatriculaInicial
+                    SqlDataAdapter adapterInicial = new SqlDataAdapter($"SELECT * FROM MatriculaInicial WHERE PrimerNombre LIKE @searchText OR PrimerApellido LIKE @searchText", connection);
+                    adapterInicial.SelectCommand.Parameters.AddWithValue("@searchText", "%" + searchText + "%");
+                    adapterInicial.Fill(dataTable);
+
+                    // Realizar la búsqueda en la tabla MatriculaSecundaria
+                    SqlDataAdapter adapterSecundaria = new SqlDataAdapter($"SELECT * FROM MatriculaSecundaria WHERE PrimerNombre LIKE @searchText OR PrimerApellido LIKE @searchText", connection);
+                    adapterSecundaria.SelectCommand.Parameters.AddWithValue("@searchText", "%" + searchText + "%");
+                    adapterSecundaria.Fill(dataTable);
+
+                    // Realizar la búsqueda en la tabla MatriculaPrimaria
+                    SqlDataAdapter adapterPrimaria = new SqlDataAdapter($"SELECT * FROM MatriculaPrimaria WHERE PrimerNombre LIKE @searchText OR PrimerApellido LIKE @searchText", connection);
+                    adapterPrimaria.SelectCommand.Parameters.AddWithValue("@searchText", "%" + searchText + "%");
+                    adapterPrimaria.Fill(dataTable);
+
+                    // Asignar el DataTable como fuente de datos del DataGridView
+                    dataGridView1.DataSource = dataTable;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                }
+            }
+        }
+
     }
 }
