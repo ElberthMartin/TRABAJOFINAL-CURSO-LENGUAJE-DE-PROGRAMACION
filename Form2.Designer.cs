@@ -39,6 +39,7 @@
             this.buttonActualizar = new System.Windows.Forms.Button();
             this.textBoxBuscar = new System.Windows.Forms.TextBox();
             this.buttonBuscar = new System.Windows.Forms.Button();
+            this.btnImprimir = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -91,7 +92,7 @@
             this.pictureBox1.Image = global::trabajofinal.Properties.Resources.FORM2;
             this.pictureBox1.Location = new System.Drawing.Point(-1, -1);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(254, 465);
+            this.pictureBox1.Size = new System.Drawing.Size(178, 465);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
@@ -99,7 +100,7 @@
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(259, 15);
+            this.comboBox1.Location = new System.Drawing.Point(212, 12);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(114, 21);
             this.comboBox1.TabIndex = 5;
@@ -108,7 +109,7 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(247, 62);
+            this.dataGridView1.Location = new System.Drawing.Point(183, 62);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(519, 233);
             this.dataGridView1.TabIndex = 6;
@@ -116,7 +117,7 @@
             // 
             // buttonEliminar
             // 
-            this.buttonEliminar.Location = new System.Drawing.Point(420, 15);
+            this.buttonEliminar.Location = new System.Drawing.Point(355, 16);
             this.buttonEliminar.Name = "buttonEliminar";
             this.buttonEliminar.Size = new System.Drawing.Size(65, 23);
             this.buttonEliminar.TabIndex = 7;
@@ -126,7 +127,7 @@
             // 
             // buttonActualizar
             // 
-            this.buttonActualizar.Location = new System.Drawing.Point(500, 13);
+            this.buttonActualizar.Location = new System.Drawing.Point(439, 9);
             this.buttonActualizar.Name = "buttonActualizar";
             this.buttonActualizar.Size = new System.Drawing.Size(75, 23);
             this.buttonActualizar.TabIndex = 8;
@@ -136,7 +137,7 @@
             // 
             // textBoxBuscar
             // 
-            this.textBoxBuscar.Location = new System.Drawing.Point(635, 18);
+            this.textBoxBuscar.Location = new System.Drawing.Point(541, 15);
             this.textBoxBuscar.Name = "textBoxBuscar";
             this.textBoxBuscar.Size = new System.Drawing.Size(117, 20);
             this.textBoxBuscar.TabIndex = 9;
@@ -144,19 +145,30 @@
             // 
             // buttonBuscar
             // 
-            this.buttonBuscar.Location = new System.Drawing.Point(773, 21);
+            this.buttonBuscar.Location = new System.Drawing.Point(677, 12);
             this.buttonBuscar.Name = "buttonBuscar";
-            this.buttonBuscar.Size = new System.Drawing.Size(68, 16);
+            this.buttonBuscar.Size = new System.Drawing.Size(68, 23);
             this.buttonBuscar.TabIndex = 10;
-            this.buttonBuscar.Text = "button4";
+            this.buttonBuscar.Text = "Buscar";
             this.buttonBuscar.UseVisualStyleBackColor = true;
             this.buttonBuscar.Click += new System.EventHandler(this.buttonBuscar_Click);
+            // 
+            // btnImprimir
+            // 
+            this.btnImprimir.Location = new System.Drawing.Point(765, 46);
+            this.btnImprimir.Name = "btnImprimir";
+            this.btnImprimir.Size = new System.Drawing.Size(75, 23);
+            this.btnImprimir.TabIndex = 11;
+            this.btnImprimir.Text = "Imprimir";
+            this.btnImprimir.UseVisualStyleBackColor = true;
+            this.btnImprimir.Click += new System.EventHandler(this.btnImprimir_Click);
             // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(864, 307);
+            this.Controls.Add(this.btnImprimir);
             this.Controls.Add(this.buttonBuscar);
             this.Controls.Add(this.textBoxBuscar);
             this.Controls.Add(this.buttonActualizar);
@@ -191,5 +203,6 @@
         private System.Windows.Forms.Button buttonActualizar;
         private System.Windows.Forms.TextBox textBoxBuscar;
         private System.Windows.Forms.Button buttonBuscar;
+        private System.Windows.Forms.Button btnImprimir;
     }
 }

@@ -2,6 +2,7 @@
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.Drawing.Printing;
 using System.Windows.Forms;
 
 namespace trabajofinal
@@ -337,5 +338,94 @@ namespace trabajofinal
             }
         }
 
+        private void btnImprimir_Click(object sender, EventArgs e)
+        {
+            // Configurar la impresión
+            PrintDocument printDocument = new PrintDocument();
+            printDocument.PrintPage += new PrintPageEventHandler(ImprimirContenido);
+
+            // Mostrar el cuadro de diálogo de impresión
+            PrintDialog printDialog = new PrintDialog();
+            printDialog.Document = printDocument;
+
+            if (printDialog.ShowDialog() == DialogResult.OK)
+            {
+                printDocument.Print();
+            }
+        }
+
+        private void ImprimirContenido(object sender, PrintPageEventArgs e)
+        {
+            // Configurar la fuente y los márgenes
+            Font font = new Font("Arial", 12);
+            float y = e.MarginBounds.Top;
+
+            // Calcular el ancho de cada columna
+            float[] columnWidths = new float[dataGridView1.Columns.Count];
+            float totalWidth = 0;
+
+            for (int i = 0; i < dataGridView1.Columns.Count; i++)
+            {
+                columnWidths[i] = dataGridView1.Columns[i].Width;
+                totalWidth += columnWidths[i];
+            }
+
+            // Definir una matriz para almacenar el texto de cada celda
+            string[,] cellText = new string[dataGridView1.Rows.Count + 1, dataGridView1.Columns.Count];
+
+            // Agregar los nombres de las columnas a la matriz
+            for (int j = 0; j < dataGridView1.Columns.Count; j++)
+            {
+                cellText[0, j] = dataGridView1.Columns[j].HeaderText;
+            }
+
+            // Recorrer las filas del DataGridView y almacenar el texto de cada celda
+            for (int i = 0; i < dataGridView1.Rows.Count; i++)
+            {
+                for (int j = 0; j < dataGridView1.Columns.Count; j++)
+                {
+                    DataGridViewCell cell = dataGridView1.Rows[i].Cells[j];
+
+                    if (cell.Value != null)
+                    {
+                        cellText[i + 1, j] = cell.Value.ToString();
+                    }
+                    else
+                    {
+                        cellText[i + 1, j] = "";
+                    }
+                }
+            }
+
+            // Dibujar la tabla con líneas
+            for (int i = 0; i <= dataGridView1.Rows.Count; i++)
+            {
+                float x = e.MarginBounds.Left;
+
+                for (int j = 0; j < dataGridView1.Columns.Count; j++)
+                {
+                    e.Graphics.DrawString(cellText[i, j], font, Brushes.Black, new RectangleF(x, y, columnWidths[j], font.Height));
+
+                    // Dibujar líneas de celda
+                    e.Graphics.DrawRectangle(Pens.Black, x, y, columnWidths[j], font.Height);
+
+                    x += columnWidths[j];
+                }
+
+                y += font.GetHeight();
+
+                // Dibujar línea de fila
+                if (i < dataGridView1.Rows.Count)
+                {
+                    e.Graphics.DrawLine(Pens.Black, e.MarginBounds.Left, y, e.MarginBounds.Right, y);
+                }
+            }
+        }
+
     }
+
 }
+
+
+
+
