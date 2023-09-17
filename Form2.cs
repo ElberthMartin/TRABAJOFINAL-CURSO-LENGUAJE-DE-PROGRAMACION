@@ -219,8 +219,6 @@ namespace trabajofinal
                 // Obtén los valores actuales de la fila seleccionada
                 int id = Convert.ToInt32(selectedRow.Cells["Id"].Value);
                 string nuevoPrimerNombre = selectedRow.Cells["PrimerNombre"].Value.ToString();
-                string nuevoGrado = selectedRow.Cells["Grado"].Value.ToString();
-                string nuevaSeccion = selectedRow.Cells["Seccion"].Value.ToString();
                 string nuevoPrimerApellido = selectedRow.Cells["PrimerApellido"].Value.ToString();
                 string nuevoSegundoApellido = selectedRow.Cells["SegundoApellido"].Value.ToString();
                 string nuevoCelular = selectedRow.Cells["Celular"].Value.ToString();
@@ -228,7 +226,6 @@ namespace trabajofinal
                 string nuevoEmail = selectedRow.Cells["Email"].Value.ToString();
                 DateTime nuevaFechaNacimiento = Convert.ToDateTime(selectedRow.Cells["FechaNacimiento"].Value);
                 string nuevasObservaciones = selectedRow.Cells["Observaciones"].Value.ToString();
-                string nuevoNivelAcademico = selectedRow.Cells["NivelAcademico"].Value.ToString();
 
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
@@ -240,8 +237,6 @@ namespace trabajofinal
 
                         string updateQuery = $"UPDATE {tableName} SET " +
                             "PrimerNombre = @PrimerNombre, " +
-                            "Grado = @Grado, " +
-                            "Seccion = @Seccion, " +
                             "PrimerApellido = @PrimerApellido, " +
                             "SegundoApellido = @SegundoApellido, " +
                             "Celular = @Celular, " +
@@ -253,8 +248,6 @@ namespace trabajofinal
 
                         SqlCommand cmd = new SqlCommand(updateQuery, connection);
                         cmd.Parameters.AddWithValue("@PrimerNombre", nuevoPrimerNombre);
-                        cmd.Parameters.AddWithValue("@Grado", nuevoGrado);
-                        cmd.Parameters.AddWithValue("@Seccion", nuevaSeccion);
                         cmd.Parameters.AddWithValue("@PrimerApellido", nuevoPrimerApellido);
                         cmd.Parameters.AddWithValue("@SegundoApellido", nuevoSegundoApellido);
                         cmd.Parameters.AddWithValue("@Celular", nuevoCelular);
@@ -279,6 +272,7 @@ namespace trabajofinal
                 MessageBox.Show("Selecciona una fila para actualizar.");
             }
         }
+
 
         private void textBoxBuscar_TextChanged(object sender, EventArgs e)
         {
