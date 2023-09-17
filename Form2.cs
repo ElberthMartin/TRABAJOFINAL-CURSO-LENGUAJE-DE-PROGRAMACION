@@ -416,6 +416,22 @@ namespace trabajofinal
             }
         }
 
+        private void button4_Click(object sender, EventArgs e)
+        {
+            // Cierra completamente el formulario Form1
+            this.Close();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            // Oculta el Form2 actual
+            this.Hide();
+
+            // Muestra el Form1 (asumiendo que ya está creado)
+            Form1 form1 = new Form1();
+            form1.Show();
+        }
+
     }
 
 }

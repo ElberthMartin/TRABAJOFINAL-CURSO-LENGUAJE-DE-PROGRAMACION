@@ -134,5 +134,29 @@
   <ItemGroup>
     <None Include="IMG\FORM2.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="IMG\primar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="IMG\inicial.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="IMG\secun.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="IMG\filtro.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="IMG\borrar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="IMG\actualizar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="IMG\buscar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="IMG\imprimir.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
