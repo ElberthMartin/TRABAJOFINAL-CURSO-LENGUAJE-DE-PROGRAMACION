@@ -158,5 +158,8 @@
   <ItemGroup>
     <None Include="IMG\imprimir.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="IMG\f1.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

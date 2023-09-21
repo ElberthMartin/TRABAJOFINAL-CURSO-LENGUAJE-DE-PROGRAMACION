@@ -22,3 +22,17 @@ C:\Users\USER\Desktop\proyectosc#\Trabajo final LENGUAJE DE PROGRAMACIÓN\Trabaj
 C:\Users\USER\Desktop\proyectosc#\Trabajo final LENGUAJE DE PROGRAMACIÓN\Trabajo final LENGUAJE DE PROGRAMACIÓN\obj\Debug\trabajofinal.Form3.resources
 C:\Users\USER\Desktop\proyectosc#\Trabajo final LENGUAJE DE PROGRAMACIÓN\Trabajo final LENGUAJE DE PROGRAMACIÓN\obj\Debug\trabajofinal.Form4.resources
 C:\Users\USER\Desktop\proyectosc#\Trabajo final LENGUAJE DE PROGRAMACIÓN\Trabajo final LENGUAJE DE PROGRAMACIÓN\obj\Debug\trabajofinal.Form5.resources
+C:\Users\USER\Desktop\programas en c#\TRABAJOFINAL-CURSO-LENGUAJE-DE-PROGRAMACION\bin\Debug\trabajofinal.exe.config
+C:\Users\USER\Desktop\programas en c#\TRABAJOFINAL-CURSO-LENGUAJE-DE-PROGRAMACION\bin\Debug\trabajofinal.exe
+C:\Users\USER\Desktop\programas en c#\TRABAJOFINAL-CURSO-LENGUAJE-DE-PROGRAMACION\bin\Debug\trabajofinal.pdb
+C:\Users\USER\Desktop\programas en c#\TRABAJOFINAL-CURSO-LENGUAJE-DE-PROGRAMACION\obj\Debug\trabajofinal.csproj.AssemblyReference.cache
+C:\Users\USER\Desktop\programas en c#\TRABAJOFINAL-CURSO-LENGUAJE-DE-PROGRAMACION\obj\Debug\trabajofinal.Form1.resources
+C:\Users\USER\Desktop\programas en c#\TRABAJOFINAL-CURSO-LENGUAJE-DE-PROGRAMACION\obj\Debug\trabajofinal.Form2.resources
+C:\Users\USER\Desktop\programas en c#\TRABAJOFINAL-CURSO-LENGUAJE-DE-PROGRAMACION\obj\Debug\trabajofinal.Form3.resources
+C:\Users\USER\Desktop\programas en c#\TRABAJOFINAL-CURSO-LENGUAJE-DE-PROGRAMACION\obj\Debug\trabajofinal.Form4.resources
+C:\Users\USER\Desktop\programas en c#\TRABAJOFINAL-CURSO-LENGUAJE-DE-PROGRAMACION\obj\Debug\trabajofinal.Form5.resources
+C:\Users\USER\Desktop\programas en c#\TRABAJOFINAL-CURSO-LENGUAJE-DE-PROGRAMACION\obj\Debug\trabajofinal.Properties.Resources.resources
+C:\Users\USER\Desktop\programas en c#\TRABAJOFINAL-CURSO-LENGUAJE-DE-PROGRAMACION\obj\Debug\trabajofinal.csproj.GenerateResource.cache
+C:\Users\USER\Desktop\programas en c#\TRABAJOFINAL-CURSO-LENGUAJE-DE-PROGRAMACION\obj\Debug\trabajofinal.csproj.CoreCompileInputs.cache
+C:\Users\USER\Desktop\programas en c#\TRABAJOFINAL-CURSO-LENGUAJE-DE-PROGRAMACION\obj\Debug\trabajofinal.exe
+C:\Users\USER\Desktop\programas en c#\TRABAJOFINAL-CURSO-LENGUAJE-DE-PROGRAMACION\obj\Debug\trabajofinal.pdb
