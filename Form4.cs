@@ -170,5 +170,15 @@ namespace trabajofinal
         {
             //alter
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            // Oculta el Form2 actual
+            this.Hide();
+
+            // Muestra el Form1 (asumiendo que ya está creado)
+            Form2 form2 = new Form2();
+            form2.Show();
+        }
     }
 }
